@@ -1,0 +1,137 @@
+.card {
+	margin-bottom: 24px;
+	background-color: transparent;
+	border: 1px solid #373350;
+	border-radius: 8px;
+	padding: 0.1rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	color: white;
+
+
+
+	.favicon {
+		width: 16px;
+		height: 16px;
+		vertical-align: middle;
+		margin-right: 8px;
+	}
+
+	.footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 12px;
+		padding-top: 12px;
+		border-top: 1px solid #30363d;
+	}
+
+	.duplicates {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+	}
+
+	.highlight mark {
+		background-color: #58a6ff33;
+		color: #58a6ff;
+		font-weight: 500;
+		padding: 0 4px;
+	}
+
+	.title {
+		margin: 0;
+		font-size: 16px;
+		font-weight: 600;
+		color: #0277DA;
+		//background-color: red;
+	}
+
+	.meta-row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 12px;
+		font-size: 12px;
+		color: #a1a1aa;
+	}
+
+	.tags-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-top: 8px;
+	}
+
+	.reach-date {
+		font-size: 12px;
+		color: #999;
+	}
+
+	.wrapper {
+		padding: 16px;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		color: #e4e8ef;
+		background-color: #0d1117;
+	}
+
+	.topRow {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+		font-size: 13px;
+		color: #9ca3af;
+	}
+
+	.authors {
+		color: #ffffff;
+		font-size: 13px;
+	}
+
+	.domain {
+		color: #8b949e;
+	}
+
+	.highlights {
+		font-size: 14px;
+		color: #c9d1d9;
+	}
+
+	.showMore {
+		font-size: 13px;
+		color: #58a6ff;
+		cursor: pointer;
+	}
+
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-top: 8px;
+	}
+
+	.tag {
+		background-color: #21262d;
+		color: #c9d1d9;
+		border: none;
+	}
+
+	.tagCount {
+		margin-left: 4px;
+		color: #8b949e;
+	}
+
+	.showAll {
+		font-size: 13px;
+		color: #58a6ff;
+		margin-left: 8px;
+		cursor: pointer;
+	}
+
+	.dupText {
+		color: #8b949e;
+		font-size: 12px;
+	}
+}
+
