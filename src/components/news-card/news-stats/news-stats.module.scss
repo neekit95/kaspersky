@@ -1,0 +1,100 @@
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: gray;
+	gap: 1rem;
+	position: relative;
+
+
+	.left {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		.title {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			color: gray;
+			gap: 1rem;
+			text-wrap: nowrap;
+			white-space: nowrap;
+			flex-wrap: nowrap;
+
+			span {
+				text-wrap: nowrap;
+				white-space: nowrap;
+				flex-wrap: nowrap;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+
+		.white {
+			color: white;
+		}
+
+		.element {
+			display: flex;
+			gap: 0.3rem;
+			flex-wrap: nowrap;
+		}
+
+	}
+
+	.right {
+		max-width: 20%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		width: 20%;
+		gap: 1rem;
+
+		.positive, .negative {
+			display: flex;
+			flex-grow: 1;
+			padding: 0.2rem 0.7rem;
+			justify-content: center;
+			align-items: center;
+			border-radius: 5px;
+			font-size: 0.7rem;
+			height: 100%;
+		}
+
+		.positive {
+			background-color: #25FCB2;
+			color: black;
+		}
+
+		.negative {
+			background-color: #d22323;
+			color: white
+		}
+
+		.icons {
+			all: unset;
+			cursor: pointer;
+			border: 1px solid white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			aspect-ratio: 1 / 1;
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 0;
+			height: 1.4rem;
+			width: 1.4rem ;
+			color: white;
+
+
+			.svg {
+				fill: white;
+			}
+
+		}
+	}
+}
+
+

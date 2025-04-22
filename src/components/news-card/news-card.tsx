@@ -2,6 +2,9 @@ import style from './news-card.module.scss';
 import { Card, Typography, Tag, Space, Button, Tooltip } from 'antd';
 import { GlobalOutlined } from '@ant-design/icons';
 import { IData_SnippetNews } from '../../lib/types/news-types.ts';
+import NewsStats from "./news-stats/news-stats.tsx";
+import { v4 as uuidv4 } from 'uuid';
+
 
 const { Title, Text, Paragraph, Link } = Typography;
 
@@ -11,14 +14,9 @@ type Props = {
 
 const NewsCard = ({ data }: Props) => {
     const {
-        TI, DP, REACH, DOM, CNTR, LANG, AU, AB, KW, URL, SENT, FAV, HIGHLIGHTS
+        TI, DP, REACH, DOM, CNTR, LANG, AU, AB, KW, URL, SENT, FAV, HIGHLIGHTS, TRAFFIC
     } = data;
 
-    const date = new Date(DP).toLocaleDateString('en-GB', {
-        day: '2-digit',
-        month: 'short',
-        year: 'numeric'
-    });
 
     const renderHighlights = () => {
         return HIGHLIGHTS.map((item, index) => (
@@ -35,8 +33,8 @@ const NewsCard = ({ data }: Props) => {
     return (
         <Card className={style.card}>
             <Space direction="vertical" size="small" style={{ width: '100%' }}>
-                {/* Дата и охват */}
-                <Text type="secondary" className={style.title}>{date} · {REACH.toLocaleString()} Reach</Text>
+
+                <NewsStats DP={DP} REACH={REACH} TRAFFIC={TRAFFIC} SENT={SENT} />
 
                 {/* Заголовок */}
                 <Title level={4} className={style.title}>{TI}</Title>
@@ -58,7 +56,7 @@ const NewsCard = ({ data }: Props) => {
                 {/* Ключевые слова */}
                 <Space wrap>
                     {KW.map((tag) => (
-                        <Tag key={tag.value}>{tag.value}</Tag>
+                        <Tag key={uuidv4()}>{tag.value}</Tag>
                     ))}
                 </Space>
 

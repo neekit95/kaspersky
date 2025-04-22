@@ -8,7 +8,7 @@ export const mockNews: IData_SnippetNews[] = [
 		"URL": "https://www.globalsecuritymag.com/Mobile-bankers-left-vulnerable-47,20200819,101944.html",
 		"DP": "2025-03-06T21:00:00",
 		"DOM": "globalsecuritymag.com",
-		"SENT": "negative",
+		"SENT": "positive",
 		"LANG": "en",
 		"AU": [],
 		"FAV": "/favicons/e65d69dc71ab539384fcc63062efdd3d.png",
