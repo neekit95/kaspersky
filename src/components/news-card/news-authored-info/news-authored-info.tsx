@@ -19,7 +19,7 @@ const NewsAuthoredInfo = ({FAV, DOM, CNTR, LANG, AU, CNTR_CODE, URL}: Props) => 
 			<Text className={style.text}>
 				<GlobalOutlined className={style.icon}/>
 
-				{/*TODO: необходимо заменить на реальную картинку, тут битая*/}
+				{/* TODO: необходимо заменить на реальную картинку, тут битая ссылка */}
 				{/*{FAV && (*/}
 				{/*	<img src={FAV} alt="favicon" className={style.favicon} />*/}
 				{/*)}*/}
