@@ -55,12 +55,13 @@
 		.positive, .negative {
 			display: flex;
 			flex-grow: 1;
-			padding: 0.2rem 0.7rem;
+			padding: 0.1rem 0.3rem;
 			justify-content: center;
 			align-items: center;
 			border-radius: 5px;
 			font-size: 0.7rem;
 			height: 100%;
+
 		}
 
 		.positive {
@@ -76,7 +77,7 @@
 		.icons {
 			all: unset;
 			cursor: pointer;
-			border: 1px solid white;
+			border: 2px solid rgba(255, 255, 255, 0.56);
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -84,13 +85,15 @@
 			-webkit-border-radius: 0;
 			-moz-border-radius: 0;
 			border-radius: 0;
-			height: 1.4rem;
-			width: 1.4rem ;
-			color: white;
-
+			height: 1rem;
+			width: 1rem ;
+			color: rgba(255, 255, 255, 0.56);
+			font-size: 1rem;
+			font-weight: 900;
+			padding: 0.1rem;
 
 			.svg {
-				fill: white;
+				fill: rgba(255, 255, 255, 0.56);
 			}
 
 		}

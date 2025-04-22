@@ -1,10 +1,9 @@
 import style from './news-card.module.scss';
-import { Card, Typography, Tag, Space, Button, Tooltip } from 'antd';
-import { GlobalOutlined } from '@ant-design/icons';
+import { Card, Typography, Tag, Space, Button } from 'antd';
 import { IData_SnippetNews } from '../../lib/types/news-types.ts';
 import NewsStats from "./news-stats/news-stats.tsx";
 import { v4 as uuidv4 } from 'uuid';
-
+import NewsAuthoredInfo from "./news-authored-info/news-authored-info.tsx";
 
 const { Title, Text, Paragraph, Link } = Typography;
 
@@ -14,7 +13,7 @@ type Props = {
 
 const NewsCard = ({ data }: Props) => {
     const {
-        TI, DP, REACH, DOM, CNTR, LANG, AU, AB, KW, URL, SENT, FAV, HIGHLIGHTS, TRAFFIC
+        TI, DP, REACH, DOM, CNTR, LANG, AU, AB, KW, URL, SENT, FAV, HIGHLIGHTS, TRAFFIC, CNTR_CODE, ID
     } = data;
 
 
@@ -36,17 +35,9 @@ const NewsCard = ({ data }: Props) => {
 
                 <NewsStats DP={DP} REACH={REACH} TRAFFIC={TRAFFIC} SENT={SENT} />
 
-                {/* Заголовок */}
-                <Title level={4} className={style.title}>{TI}</Title>
+                <Title level={5}  className={style.title}>{TI}</Title>
 
-                {/* Источник, язык, страна, авторы */}
-                <Space wrap>
-                    <img src={FAV} alt="favicon" className={style.favicon} />
-                    <Text type="secondary"><GlobalOutlined /> {DOM}</Text>
-                    <Tag>{CNTR}</Tag>
-                    <Tag>{LANG.toUpperCase()}</Tag>
-                    {AU.length > 0 && <Text>{AU.join(', ')}</Text>}
-                </Space>
+                <NewsAuthoredInfo AU={AU} DOM={DOM} CNTR={CNTR} FAV={FAV} LANG={LANG} CNTR_CODE={CNTR_CODE} URL={URL}/>
 
                 {/* Подсвеченные фрагменты */}
                 {HIGHLIGHTS.length ? renderHighlights() : (

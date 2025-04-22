@@ -4,6 +4,7 @@ import {Typography} from "antd";
 import { v4 as uuidv4 } from 'uuid';
 import {InfoOutlined} from "@ant-design/icons";
 
+
 const { Text } = Typography;
 type Props = Pick<IData_SnippetNews, 'DP' | 'REACH' | 'TRAFFIC' |'SENT'>;
 
