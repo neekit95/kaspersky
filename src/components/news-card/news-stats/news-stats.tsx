@@ -6,9 +6,11 @@ import {InfoOutlined} from "@ant-design/icons";
 
 
 const { Text } = Typography;
-type Props = Pick<IData_SnippetNews, 'DP' | 'REACH' | 'TRAFFIC' |'SENT'>;
+type Props = Pick<IData_SnippetNews, 'DP' | 'REACH' | 'TRAFFIC' | 'SENT'> & {
+	isOrigin: boolean;
+};
 
-const NewsStats = ({DP, REACH, TRAFFIC, SENT} :Props) => {
+const NewsStats = ({ DP, REACH, TRAFFIC, SENT, isOrigin }: Props) => {
 
 	const date = new Date(DP).toLocaleDateString('en-GB', {
 		day: '2-digit',
@@ -41,32 +43,41 @@ const NewsStats = ({DP, REACH, TRAFFIC, SENT} :Props) => {
 					</span> Reach
 					</div>
 
-					<div className={style.element}>
-						Top Traffic:
-						{TRAFFIC.filter((item) => item.count >= 0.1).map((item) => (
-							<div className={style.element} key={uuidv4()}>
-								{item.value}
-								<span className={style.white}>
+					{isOrigin && (
+						<div className={style.element}>
+							Top Traffic:
+							{TRAFFIC.filter((item) => item.count >= 0.1).map((item) => (
+								<div className={style.element} key={uuidv4()}>
+									{item.value}
+									<span className={style.white}>
 							{item.count.toFixed(1)}%
 							</span>
-							</div>
-						))}
-					</div>
+								</div>
+							))}
+						</div>
+					)}
+
 				</Text>
 			</div>
 
+
 			<div className={style.right}>
-				{SENT === 'positive' && (
-					<div className={style.positive}>
-						Positive
-					</div>
+				{isOrigin && (
+					<>
+						{SENT === 'positive' && (
+							<div className={style.positive}>
+								Positive
+							</div>
+						)}
+
+						{SENT === 'negative' && (
+							<div className={style.negative}>
+								Negative
+							</div>
+						)}
+					</>
 				)}
 
-				{SENT === 'negative' && (
-					<div className={style.negative}>
-						Negative
-					</div>
-				)}
 
 				<button className={style.icons}>
 					<InfoOutlined />

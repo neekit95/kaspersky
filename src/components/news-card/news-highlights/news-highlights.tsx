@@ -52,7 +52,6 @@ const NewsHighlights = ({HIGHLIGHTS, AB, KW}:Props) => {
 				{KW.map((tag) => (
 					<Tag className={style.keywords} key={uuidv4()}>
 						{tag.value}
-
 						<span> {tag.count} </span>
 					</Tag>
 				))}

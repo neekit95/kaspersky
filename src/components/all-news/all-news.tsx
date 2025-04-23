@@ -10,7 +10,7 @@ const AllNews = ({news} : Props) => {
 	return (
 		<div className={style.container}>
 			{news.map((item: IData_SnippetNews) => (
-				<NewsCard key={item.ID} data={item} />
+				<NewsCard key={item.ID} data={item} isOrigin={item.ID === news[0].ID} />
 			))}
 		</div>
 	);
