@@ -1,35 +1,35 @@
 .container {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 1rem;
-	color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    color: white;
 
-	.favicon {
-		width: 16px;
-		height: 16px;
-		vertical-align: middle;
-	}
+    .favicon {
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+    }
 
-	.icon {
-		font-size: 1.2rem;
-	}
-	.link {
-		color: white;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 0.3rem;
-		text-decoration: underline;
-		text-underline-offset: 4px;
-		color: #0277DA;
-	}
+    .icon {
+        font-size: 1.2rem;
+    }
 
-	.text {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: white;
-		gap: 0.3rem;
-	}
+    .link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3rem;
+        color: #0277da;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+
+    .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3rem;
+        color: white;
+    }
 }

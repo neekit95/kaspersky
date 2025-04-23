@@ -2,12 +2,12 @@ import style from './news-card.module.scss';
 import { Typography, Dropdown, Menu, Button } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
 import { IData_SnippetNews } from '../../lib/types/news-types.ts';
-import NewsStats from "./news-stats/news-stats.tsx";
-import NewsAuthoredInfo from "./news-authored-info/news-authored-info.tsx";
-import NewsHighlights from "./news-highlights/news-highlights.tsx";
+import NewsStats from './news-stats/news-stats.tsx';
+import NewsAuthoredInfo from './news-authored-info/news-authored-info.tsx';
+import NewsHighlights from './news-highlights/news-highlights.tsx';
 import { useState } from 'react';
 
-import {mockNews} from "../../mock/news.ts";
+import { mockNews } from '../../mock/news.ts';
 const { Title, Text, Link } = Typography;
 
 type Props = {
@@ -19,7 +19,21 @@ type Props = {
 
 const NewsCard = ({ data, isOrigin, onClick }: Props) => {
     const {
-        TI, DP, REACH, DOM, CNTR, LANG, AU, AB, KW, URL, SENT, FAV, HIGHLIGHTS, TRAFFIC, CNTR_CODE
+        TI,
+        DP,
+        REACH,
+        DOM,
+        CNTR,
+        LANG,
+        AU,
+        AB,
+        KW,
+        URL,
+        SENT,
+        FAV,
+        HIGHLIGHTS,
+        TRAFFIC,
+        CNTR_CODE,
     } = data;
 
     const [selectedKey, setSelectedKey] = useState<string>('relevance');
@@ -38,17 +52,36 @@ const NewsCard = ({ data, isOrigin, onClick }: Props) => {
 
     return (
         <div className={style.container} onClick={onClick}>
-            <div className={`${!isOrigin ? style.nonOrigin : style.card }`}>
+            <div className={`${!isOrigin ? style.nonOrigin : style.card}`}>
+                <NewsStats
+                    DP={DP}
+                    REACH={REACH}
+                    TRAFFIC={TRAFFIC}
+                    SENT={SENT}
+                    isOrigin={isOrigin}
+                />
 
-                <NewsStats DP={DP} REACH={REACH} TRAFFIC={TRAFFIC} SENT={SENT} isOrigin={isOrigin}/>
+                <Title level={5} className={style.title}>
+                    {TI}
+                </Title>
 
-                <Title level={5} className={style.title}>{TI}</Title>
-
-                <NewsAuthoredInfo AU={AU} DOM={DOM} CNTR={CNTR} FAV={FAV} LANG={LANG} CNTR_CODE={CNTR_CODE} URL={URL}/>
+                <NewsAuthoredInfo
+                    AU={AU}
+                    DOM={DOM}
+                    CNTR={CNTR}
+                    FAV={FAV}
+                    LANG={LANG}
+                    CNTR_CODE={CNTR_CODE}
+                    URL={URL}
+                />
 
                 {isOrigin && (
                     <div className={style.bottomSection}>
-                        <NewsHighlights HIGHLIGHTS={HIGHLIGHTS} AB={AB} KW={KW}/>
+                        <NewsHighlights
+                            HIGHLIGHTS={HIGHLIGHTS}
+                            AB={AB}
+                            KW={KW}
+                        />
 
                         <Link href={URL} className={style.link}>
                             Original Source
@@ -64,16 +97,26 @@ const NewsCard = ({ data, isOrigin, onClick }: Props) => {
                                 </Text>
                             </div>
 
-                            <Dropdown overlay={duplicateSortMenu} trigger={['click']} className={style.dropdown}>
-                                <Button size="small" className={style.dropButton}>
-                                    {selectedKey === 'relevance' ? 'By relevance' : selectedKey === 'date' ? 'By date' : 'By reach'}
+                            <Dropdown
+                                overlay={duplicateSortMenu}
+                                trigger={['click']}
+                                className={style.dropdown}
+                            >
+                                <Button
+                                    size="small"
+                                    className={style.dropButton}
+                                >
+                                    {selectedKey === 'relevance'
+                                        ? 'By relevance'
+                                        : selectedKey === 'date'
+                                          ? 'By date'
+                                          : 'By reach'}
                                     <DownOutlined />
                                 </Button>
                             </Dropdown>
                         </div>
                     </div>
                 )}
-
             </div>
         </div>
     );

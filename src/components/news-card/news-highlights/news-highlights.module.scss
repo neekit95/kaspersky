@@ -1,69 +1,66 @@
 .highlight mark {
-	background-color: #58a6ff33;
-	color: #0972CB;
-	font-weight: 500;
-	padding: 0 4px;
+    padding: 0 4px;
+    background-color: #58a6ff33;
+    font-weight: 500;
+    color: #0972cb;
 }
-
-
 
 .highlighted {
-	background-color:#0972CB;
-	padding: 0.1rem 0.5rem;
-	color: white;
-	border-radius: 3px;
-	margin: 0 0.1rem;
+    margin: 0 0.1rem;
+    padding: 0.1rem 0.5rem;
+    background-color: #0972cb;
+    border-radius: 3px;
+    color: white;
 }
 
-
 .highlights {
-	font-size: 14px;
-	color: #c9d1d9;
+    font-size: 14px;
+    color: #c9d1d9;
 }
 
 .container {
-	color: white;
-	display: flex;
-	flex-direction: column;
-	padding-top: 1rem;
-	justify-content: space-between;
-	align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: white;
+    padding-top: 1rem;
+}
 
-}
 .paragraph {
-	color: white;
+    color: white;
 }
+
 .span {
-	color: white;
+    color: white;
 }
 
 .keywords {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 0.4rem;
-	background-color: transparent;
-	border: 1px solid grey;
-	border-radius: 15px;
-	color: grey;
-	span {
-		color: white;
-	}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 15px;
+    color: grey;
 
+    span {
+        color: white;
+    }
 }
 
 .showMore {
-	color: #58a6ff;
-	cursor: pointer;
-	display: inline-block;
-
-	margin-bottom: 10px;
-	margin-top: -10px;
+    display: inline-block;
+    color: #58a6ff;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: -10px;
 }
 
 .arrow {
-	width: 12px;
-	height: 12px;
-	margin-left: 4px;
-	vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+    vertical-align: middle;
 }
