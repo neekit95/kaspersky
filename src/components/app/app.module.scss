@@ -1,0 +1,22 @@
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    min-height: calc(100vh - 4rem);
+    padding: 1rem;
+    color: white;
+    place-self: center center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    min-width: 100vw;
+    min-height: calc(100vh - 4rem);
+    padding: 2rem;
+}
