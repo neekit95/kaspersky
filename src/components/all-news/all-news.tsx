@@ -10,18 +10,31 @@ type Props = {
 }
 
 const AllNews = ({ news }: Props) => {
+	const [newsList, setNewsList] = useState(news);
 	const [showDuplicates, setShowDuplicates] = useState(false);
 
 	const toggleDuplicates = () => {
 		setShowDuplicates(prev => !prev);
 	};
 
-	const visibleNews = showDuplicates ? news : news.slice(0, 2);
+	const visibleNews = showDuplicates ? newsList : newsList.slice(0, 2);
 
 	return (
 		<div className={style.container}>
 			{visibleNews.map((item: IData_SnippetNews, index: number) => (
-				<NewsCard key={item.ID} data={item} isOrigin={item.ID === news[0].ID} index={index} />
+				<NewsCard
+					key={item.ID}
+					data={item}
+					isOrigin={item.ID === newsList[0].ID}
+					index={index}
+					onClick={() => {
+						if (index !== 0) {
+							const newList = [item, ...newsList.filter(n => n.ID !== item.ID)];
+							setNewsList(newList);
+							setShowDuplicates(false);
+						}
+					}}
+				/>
 			))}
 
 			<div className={style.footer}>
