@@ -1,0 +1,96 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    color: gray;
+
+    .left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .title {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
+            color: gray;
+            text-wrap: nowrap;
+            white-space: nowrap;
+
+            span {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+                text-wrap: nowrap;
+                white-space: nowrap;
+            }
+        }
+
+        .white {
+            color: white;
+        }
+
+        .element {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 0.3rem;
+        }
+    }
+
+    .right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 20%;
+        max-width: 20%;
+        gap: 1rem;
+
+        .positive,
+        .negative {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0.1rem 0.3rem;
+            border-radius: 5px;
+            font-size: 0.7rem;
+        }
+
+        .positive {
+            background-color: #25fcb2;
+            color: black;
+        }
+
+        .negative {
+            background-color: #d22323;
+            color: white;
+        }
+
+        .icons {
+            all: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1rem;
+            height: 1rem;
+            padding: 0.1rem;
+            border: 2px solid rgb(255 255 255 / 56%);
+            border-radius: 0;
+            font-size: 1rem;
+            font-weight: 900;
+            color: rgb(255 255 255 / 56%);
+            aspect-ratio: 1 / 1;
+            cursor: pointer;
+
+            .svg {
+                fill: rgb(255 255 255 / 56%);
+            }
+        }
+    }
+}
