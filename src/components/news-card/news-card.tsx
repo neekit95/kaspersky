@@ -1,22 +1,23 @@
 import style from './news-card.module.scss';
-import { Card, Typography, Tag, Space, Button } from 'antd';
+import { Typography } from 'antd';
 import { IData_SnippetNews } from '../../lib/types/news-types.ts';
 import NewsStats from "./news-stats/news-stats.tsx";
-import { v4 as uuidv4 } from 'uuid';
+
 import NewsAuthoredInfo from "./news-authored-info/news-authored-info.tsx";
 import NewsHighlights from "./news-highlights/news-highlights.tsx";
 import {mockNews} from "../../mock/news.ts";
 
-const { Title, Text, Paragraph, Link } = Typography;
+const { Title, Text, Link } = Typography;
 
 type Props = {
     data: IData_SnippetNews;
-    isOrigin: boolean
+    isOrigin: boolean;
+    index: number;
 };
 
 const NewsCard = ({ data, isOrigin }: Props) => {
     const {
-        TI, DP, REACH, DOM, CNTR, LANG, AU, AB, KW, URL, SENT, FAV, HIGHLIGHTS, TRAFFIC, CNTR_CODE, ID
+        TI, DP, REACH, DOM, CNTR, LANG, AU, AB, KW, URL, SENT, FAV, HIGHLIGHTS, TRAFFIC, CNTR_CODE
     } = data;
 
 
@@ -29,6 +30,8 @@ const NewsCard = ({ data, isOrigin }: Props) => {
                 <Title level={5}  className={style.title}>{TI}</Title>
 
                 <NewsAuthoredInfo AU={AU} DOM={DOM} CNTR={CNTR} FAV={FAV} LANG={LANG} CNTR_CODE={CNTR_CODE} URL={URL}/>
+
+
 
                 {isOrigin && (
                     <div>

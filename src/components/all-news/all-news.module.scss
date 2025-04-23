@@ -5,7 +5,19 @@
 	flex-direction: column;
 	border: 1px solid #373350;
 	border-radius: 8px;
-	//padding-bottom: 1rem;
-	//padding: 1rem;
-	//gap: 1rem;
+}
+.footer {
+	width: 100%;
+	padding: 0.5rem 1rem 1.5rem;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 1rem;
+	width: 100%;
+	background-color: transparent;
+	color: white;
+	font-weight: 600;
 }
