@@ -1,62 +1,35 @@
-# React + TypeScript + Vite
+# News
 
-This template provides a minimal setup to get React working in Vite with HMR and
-some ESLint rules.
+Этот проект представляет собой компонент для отображения блока новостей, выполненный как тестовое задание для 
+компании Kaspersky. 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react)
-  uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc)
-  uses [SWC](https://swc.rs/) for Fast Refresh
+## Функционал
 
-## Expanding the ESLint configuration
+- Принимает данные о новости.
+- Отображает заголовок, описание, ссылку, автора, ключевые слова и другие данные.
+- Включает функционал для отображения блоков содержимого с ключевыми словами.
 
-If you are developing a production application, we recommend updating the
-configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config({
-    extends: [
-        // Remove ...tseslint.configs.recommended and replace with this
-        ...tseslint.configs.recommendedTypeChecked,
-        // Alternatively, use this for stricter rules
-        ...tseslint.configs.strictTypeChecked,
-        // Optionally, add this for stylistic rules
-        ...tseslint.configs.stylisticTypeChecked,
-    ],
-    languageOptions: {
-        // other options...
-        parserOptions: {
-            project: ['./tsconfig.node.json', './tsconfig.app.json'],
-            tsconfigRootDir: import.meta.dirname,
-        },
-    },
-});
-```
+## Технологии
 
-You can also install
-[eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x)
-and
-[eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom)
-for React-specific lint rules:
+- **JavaScript/TypeScript**
+- **React**
+- **Redux**
+- **Ant Design**
+- **SCSS**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+## Установка
 
-export default tseslint.config({
-    plugins: {
-        // Add the react-x and react-dom plugins
-        'react-x': reactX,
-        'react-dom': reactDom,
-    },
-    rules: {
-        // other rules...
-        // Enable its recommended typescript rules
-        ...reactX.configs['recommended-typescript'].rules,
-        ...reactDom.configs.recommended.rules,
-    },
-});
-```
+1. Клонировать репозиторий:
+   ```bash
+   git clone https://github.com/neekit95/kaspersky-.git
+   cd kaspersky
+
+2. Установить зависимости:
+   ```bash
+   npm install
+
+3. Запустить проект в режиме разработки:
+   ```bash
+   npm run dev
