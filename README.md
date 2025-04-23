@@ -23,7 +23,7 @@
 
 1. Клонировать репозиторий:
    ```bash
-   git clone https://github.com/neekit95/kaspersky-.git
+   git clone https://github.com/neekit95/kaspersky.git
    cd kaspersky
 
 2. Установить зависимости:
