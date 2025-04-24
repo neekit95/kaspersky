@@ -15,14 +15,6 @@
     -moz-osx-font-smoothing: grayscale;
     font-synthesis: none;
     text-rendering: optimizelegibility;
-
-    /* width: 100%; */
-
-    /* display: flex; */
-
-    /* justify-self: center; */
-
-    /* background-color:red; */
 }
 
 a {
@@ -63,24 +55,4 @@ button {
 
 button:hover {
     border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        background-color: #fff;
-        color: #213547;
-    }
-
-    a:hover {
-        color: #747bff;
-    }
-
-    button {
-        background-color: #f9f9f9;
-    }
 }
